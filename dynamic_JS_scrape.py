@@ -65,11 +65,14 @@ print('-------------------------------------------------------------------------
 def getTRP (lap) :
     return {
         'Title' : removeExtra(lap.find('div' , attrs='col col-7-12').children)[1].getText() ,
-        'Rating' : removeExtra(lap.find('div' , attrs='col col-7-12').children)[2].find('div').getText() ,
+        # 'Rating' : removeExtra(lap.find('div' , attrs='col col-7-12').children)[2].find('div').getText() ,
         'Price' : lap.find('div' , attrs='col col-5-12 BfVC2z').div.div.div.getText()
     }
 
 
 laptop_data = [ getTRP(lap)  for lap in lap_list[2:26]]
 
+print(len(laptop_data))
+
+print('------------------------------------------------------------------------------------------------')
 print(laptop_data)
